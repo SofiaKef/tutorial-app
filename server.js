@@ -9,17 +9,12 @@ app.use(express.static(path.join(__dirname, 'pic-resize/public')));
 
 // Handles any requests that don't match the ones above
 app.get('/resize', (req, res) => {
-<<<<<<< Updated upstream
   res.send('Express is working');
-=======
   const exampleJson = [
     { id: 1, desc: 'background' },
     { id: 2, desc: 'witch' },
     { id: 3, desc: 'vampire' },
   ];
-
-  res.json(exampleJson);
->>>>>>> Stashed changes
 });
 
 app.listen(port);
