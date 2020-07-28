@@ -10,12 +10,13 @@ app.use(express.static(path.join(__dirname, 'client/public')));
 
 // Handles any requests that don't match the ones above
 app.get('/resize', (req, res) => {
-  res.send('Express is working');
   const exampleJson = [
     { id: 1, desc: 'background' },
     { id: 2, desc: 'witch' },
     { id: 3, desc: 'vampire' },
   ];
+
+  res.json(exampleJson);
 });
 
 app.listen(port);
