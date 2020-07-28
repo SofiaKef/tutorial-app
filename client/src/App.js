@@ -42,6 +42,34 @@ class Board extends React.Component {
   }
 }
 
+class Images extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      images: []
+    }
+  }
+
+  componentDidMount() {
+    fetch('/resize')
+      .then(res => res.json())
+      .then(images => this.setState({ images }))
+  }
+
+  render() {
+    return (
+      <div>
+        <h3>Images</h3>
+        <ul>
+          {this.state.images.map(images =>
+            <li key={images.id}>{images.desc} </li>
+            )}
+        </ul>
+      </div>
+    )
+  }
+}
+
 class Game extends React.Component {
   constructor(props) {
     super(props);
@@ -102,6 +130,7 @@ class Game extends React.Component {
     }
 
     return (
+      <div>
       <div className='game'>
         <div className='game-board'>
           <Board
@@ -113,6 +142,10 @@ class Game extends React.Component {
           <div>{status}</div>
           <ol>{moves}</ol>
         </div>
+      </div>
+      <div className='images'>
+      <Images />
+      </div>
       </div>
     );
   }
@@ -139,28 +172,5 @@ function calculateWinner(squares) {
   }
   return null;
 }
-
-/*
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-*/
 
 export default Game;
