@@ -24,8 +24,12 @@
     "eslint": "^7.5.0",
     "eslint-config-airbnb-base": "^14.2.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "eslint-plugin-import": "^2.22.0",
     "nodemon": "^2.0.4"
+=======
+    "eslint-plugin-import": "^2.22.0"
+>>>>>>> parent of 49adc53... Made react fetch json data from express
 =======
     "eslint-plugin-import": "^2.22.0"
 >>>>>>> parent of 49adc53... Made react fetch json data from express

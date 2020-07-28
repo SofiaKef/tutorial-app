@@ -10,11 +10,14 @@ app.use(express.static(path.join(__dirname, 'pic-resize/public')));
 app.get('/resize', (req, res) => {
   res.send('Express is working');
 <<<<<<< HEAD
+<<<<<<< HEAD
   const exampleJson = [
     { id: 1, desc: 'background' },
     { id: 2, desc: 'witch' },
     { id: 3, desc: 'vampire' },
   ];
+=======
+>>>>>>> parent of 49adc53... Made react fetch json data from express
 =======
 >>>>>>> parent of 49adc53... Made react fetch json data from express
 });
